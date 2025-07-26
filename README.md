@@ -1,6 +1,6 @@
 Project Overview
-'
-    VillageConnect is a simple static front-end (HTML/CSS) paired with a lightweight Node.js backend API. It aims to provide rural communities with announcements and            essential services. This repository contains all source code, documentation, and deployment scripts for AWS.
+
+'    VillageConnect is a simple static front-end (HTML/CSS) paired with a lightweight Node.js backend API. It aims to provide rural communities with announcements and            essential services. This repository contains all source code, documentation, and deployment scripts for AWS.
 
 Architecture
     <img width="430" height="446" alt="image" src="https://github.com/user-attachments/assets/67e611d6-9dbd-4169-99ad-8581a2d1a4be" />
