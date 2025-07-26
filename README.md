@@ -67,8 +67,7 @@ Deployment Steps
         4. Deploy files
         
             aws s3 sync frontend/ s3://villageconnect-frontend
-   '
-            <img width="1920" height="1080" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/b69d17bf-6aa0-4140-be4c-9720ef225de6" />
+   
 
 2. Backend API on EC2
 
@@ -82,27 +81,28 @@ Deployment Steps
  
 
     1.Connect via SSH
-      ssh -i path/to/key.pem ec2-user@<EC2_PUBLIC_IP>
+
+        ssh -i path/to/key.pem ec2-user@<EC2_PUBLIC_IP>
     
     2.Install Node.js & Git
-    '
+    
         sudo yum update -y
-       ' 
+       '
         curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
-        '
+        
         sudo yum install -y nodejs git3.
     
     Clone and start the app
-    '
+    
         cd villageconnect-cloud/backend
-     '
+     
         npm install
-      '
+      
         node index.js
     
     
     6.Test API
-   '
+   
            curl http://<EC2_PUBLIC_IP>:3000/health
    
 
