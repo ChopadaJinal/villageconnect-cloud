@@ -1,5 +1,5 @@
 Project Overview
-
+'
     VillageConnect is a simple static front-end (HTML/CSS) paired with a lightweight Node.js backend API. It aims to provide rural communities with announcements and            essential services. This repository contains all source code, documentation, and deployment scripts for AWS.
 
 Architecture
@@ -67,7 +67,8 @@ Deployment Steps
         4. Deploy files
         
             aws s3 sync frontend/ s3://villageconnect-frontend
-   
+  '    
+            <img width="1920" height="1080" alt="Screenshot (16)" src="https://github.com/user-attachments/assets/0ef38a1e-ae51-4701-9c0d-2ca94fd24a9a" />
 
 2. Backend API on EC2
 
@@ -104,6 +105,7 @@ Deployment Steps
     6.Test API
    
            curl http://<EC2_PUBLIC_IP>:3000/health
+   
    
 
 4. Monitoring with CloudWatch
