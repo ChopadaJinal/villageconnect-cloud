@@ -4,21 +4,8 @@ VillageConnect is a simple static front-end (HTML/CSS) paired with a lightweight
 
 Architecture
 
-+------------+       +------------+
-|            |       |            |
-| S3 Bucket  | <---> |   Users    |
-| (Static    |       | (Browser)  |
-|  Website)  |       |            |
-+------------+       +------------+S
-       |
-       | (API calls)
-       v
-+------------+       +---------------+
-|            |       |               |
-| EC2 Instance| ---> | CloudWatch    |
-| (Node.js   |       | (Metrics,     |
-|  Backend)  |       |  Alarms)      |
-+------------+       +---------------+
+<img width="430" height="446" alt="image" src="https://github.com/user-attachments/assets/67e611d6-9dbd-4169-99ad-8581a2d1a4be" />
+
 
 ## Prerequisites
 
