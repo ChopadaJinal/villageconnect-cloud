@@ -31,6 +31,7 @@ villageconnect-cloud/
 ├── README.md           # This file
 └── deploy-scripts/     # Automation scripts (e.g., bash, CloudFormation templates)
 
+```
 Deployment Steps
 
 1. Static Website on S3
@@ -44,7 +45,7 @@ Enable static website hosting
 aws s3 website s3://villageconnect-frontend --index-document index.html --error-document error.html
 
 Configure Bucket Policy (make objects publicly readable):
-
+```text
 {
   "Version": "2012-10-17",
   "Statement": [{
@@ -56,6 +57,7 @@ Configure Bucket Policy (make objects publicly readable):
   }]
 }
 ```
+
 Deploy files
   -aws s3 sync frontend/ s3://villageconnect-frontend
    
