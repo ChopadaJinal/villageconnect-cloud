@@ -18,18 +18,21 @@ Architecture
 
 ```text
 villageconnect-cloud/
-├── frontend/           # Static HTML/CSS site
-│   ├── index.html
-│   ├── styles.css
-│   └── assets/         # Images, icons
-│       └── logo.png
-├── backend/            # Node.js API
-│   ├── index.js
-│   ├── package.json
-│   └── routes/
-├── docs/               # Documentation and diagrams
-├── README.md           # This file
-└── deploy-scripts/     # Automation scripts (e.g., bash, CloudFormation templates)
+├── backend/                    # Node.js backend
+│   ├── index.js                # Main server file
+│   ├── package.json            # Dependencies and metadata
+│   ├── package-lock.json       # Dependency lock file
+│   └── routes/                 # API routes
+│       └── userRoutes.js
+├── deploy-scripts/            # CloudFormation and deployment scripts
+│   └── template.yaml           # Infrastructure as Code (IaC) template
+├── docs/                      # Project-related documentation
+│   └── architecture.png        # Architecture diagram
+└── frontend/                  # Static frontend website
+    ├── index.html              # Homepage HTML
+    ├── styles.css              # Custom styles
+    └── script.js               # JS logic for frontend
+
 
 ```
 Deployment Steps
