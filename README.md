@@ -68,7 +68,7 @@ Configure Bucket Policy (make objects publicly readable):
     "Resource": "arn:aws:s3:::villageconnect-frontend/*"
   }]
 }
-
+```
 Deploy files
   aws s3 sync frontend/ s3://villageconnect-frontend
    
