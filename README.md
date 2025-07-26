@@ -80,11 +80,14 @@ Deploy files
   ssh -i path/to/key.pem ec2-user@<EC2_PUBLIC_IP>
 
 2.Install Node.js & Git
-  <img width="811" height="118" alt="image" src="https://github.com/user-attachments/assets/4aff8c61-6d2e-4f17-98e4-2c0aea995b44" />
-3.Clone and start the app
-       cd villageconnect-cloud/backend
-       npm install
-       node index.js
+sudo yum update -y
+    curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
+    sudo yum install -y nodejs git3.
+
+Clone and start the app
+    cd villageconnect-cloud/backend
+    npm install
+    node index.js
 
 4.(Optional) Set up a process manager
        sudo npm install -g pm2
