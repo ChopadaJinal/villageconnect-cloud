@@ -70,7 +70,47 @@ Configure Bucket Policy (make objects publicly readable):
 }
 ```
 Deploy files
-  aws s3 sync frontend/ s3://villageconnect-frontend
+  -aws s3 sync frontend/ s3://villageconnect-frontend
    
    <img width="1920" height="1080" alt="Screenshot (15)" src="https://github.com/user-attachments/assets/b69d17bf-6aa0-4140-be4c-9720ef225de6" />
+
+2. Backend API on EC2
+
+ -Launch EC2 Instance
+
+ -AMI: Amazon Linux 2
+
+ -Instance Type: t2.micro (free tier)
+
+ -Security Group: Allow inbound HTTP (port 80) and SSH (port 22)
+
+1.Connect via SSH
+  ssh -i path/to/key.pem ec2-user@<EC2_PUBLIC_IP>
+
+2.Install Node.js & Git
+  <img width="811" height="118" alt="image" src="https://github.com/user-attachments/assets/4aff8c61-6d2e-4f17-98e4-2c0aea995b44" />
+3.Clone and start the app
+       cd villageconnect-cloud/backend
+       npm install
+       node index.js
+
+4.(Optional) Set up a process manager
+       sudo npm install -g pm2
+       pm2 start index.js --name villageconnect-backend
+       pm2 startup
+       pm2 save
+
+5.Test API
+       curl http://<EC2_PUBLIC_IP>:3000/health
+
+3. Monitoring with CloudWatch
+   - Create Alarms in CloudWatch Console
+
+       EC2 CPU Utilization Alarm: Trigger if > 80% for 5 minutes.
+       Memory Usage Alarm: Trigger if > 75% for 5 minutes. 
+       Custom Log Metric (optional): Track specific API errors via CloudWatch Logs.
+   
+                     
+
+<img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/fc01e9ea-d16b-45b6-86f3-727cde3bbb25" />
 
